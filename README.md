@@ -32,27 +32,28 @@ Chat with YouTube videos, get instant summaries of articles and educational cont
 
 ## Project structure
 
+```
 .
 ├── backend/
-│ ├── main.py # FastAPI app: /youtube, /ask, /summary, /extract
-│ ├── requirements.txt
-│ └── .env # GOOGLE_API_KEY (not committed)
+│   ├── main.py            # FastAPI app: /youtube, /ask, /summary, /extract
+│   ├── requirements.txt
+│   └── .env               # GOOGLE_API_KEY (not committed)
 └── extension/
-├── src/
-│ ├── App.jsx
-│ ├── contentScript.js # page-type detection + content extraction
-│ └── components/
-│ ├── Header.jsx
-│ ├── VideoPanel.jsx
-│ ├── ArticleView.jsx
-│ ├── ProductView.jsx
-│ ├── ChatWindow.jsx
-│ ├── MessageRow.jsx
-│ └── ChatInput.jsx
-└── public/
-├── manifest.json
-└── background.js
-
+    ├── src/
+    │   ├── App.jsx
+    │   ├── contentScript.js   # page-type detection + content extraction
+    │   └── components/
+    │       ├── Header.jsx
+    │       ├── VideoPanel.jsx
+    │       ├── ArticleView.jsx
+    │       ├── ProductView.jsx
+    │       ├── ChatWindow.jsx
+    │       ├── MessageRow.jsx
+    │       └── ChatInput.jsx
+    └── public/
+        ├── manifest.json
+        └── background.js
+```
 
 ## Setup
 
@@ -67,8 +68,9 @@ pip install -r requirements.txt
 
 Create a `.env` file in `backend/`:
 
+```
 GOOGLE_API_KEY=your_gemini_api_key_here
-
+```
 
 Run the server:
 
