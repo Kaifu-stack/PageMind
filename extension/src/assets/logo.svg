@@ -1,0 +1,17 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="8" y1="8" x2="56" y2="56">
+      <stop offset="0%" stop-color="#45D9FF"></stop>
+      <stop offset="100%" stop-color="#2563EB"></stop>
+    </linearGradient>
+  </defs>
+
+  <!-- Play / Video shape -->
+  <path d="M16 8C11.6 8 8 11.6 8 16V48C8 52.4 11.6 56 16 56L45 38C49 35.5 49 28.5 45 26L16 8Z" fill="url(#logoGradient)"></path>
+
+  <!-- Play button -->
+  <path d="M25 20L43 32L25 44V20Z" fill="white"></path>
+
+  <!-- AI spark -->
+  <path d="M50 8L52 13L57 15L52 17L50 22L48 17L43 15L48 13L50 8Z" fill="#45D9FF"></path>
+</svg>
