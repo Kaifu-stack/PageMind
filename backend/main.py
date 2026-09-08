@@ -61,9 +61,6 @@ MAX_SUMMARY_BATCHES = 6
 
 CONVERSATION_HISTORY_TURNS = 3
 
-# Below this many characters, send the full page directly to the LLM
-# instead of chunking + retrieving — most articles fit comfortably and
-# direct context is strictly more accurate than vector-similarity chunks.
 DIRECT_CONTEXT_CHAR_LIMIT = 14_000
 
 video_sessions: dict = {}
@@ -516,9 +513,6 @@ def add_timestamp_links(answer, documents):
         if seconds is None:
             return timestamp
 
-        # Fragment link (#ts-N), not a custom scheme — react-markdown's
-        # sanitizer strips unrecognized schemes like "timestamp:" before
-        # our click handler ever sees the href, so a fragment is required.
         return f"[{timestamp}](#ts-{seconds})"
 
     timestamp_pattern = (
