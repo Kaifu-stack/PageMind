@@ -35,7 +35,6 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import FAISS
 
 from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_google_genai.chat_models import GoogleRateLimitError
 
 
 # logging setup
@@ -78,8 +77,7 @@ page_sessions: dict = {}
 embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
 # gemini llm
 llm = ChatGoogleGenerativeAI(
-    model="gemini-3.5-flash-lite",
-    temperature=0
+    model="gemini-3.5-flash-lite"
 )
 
 # youtube api
@@ -345,7 +343,6 @@ def format_timestamp(seconds: float) -> str:
 
 # gemini call with retry on rate limit
 @retry(
-    retry=retry_if_exception_type(GoogleRateLimitError),
     wait=wait_exponential(multiplier=1, min=2, max=30),
     stop=stop_after_attempt(5),
     reraise=True
