@@ -433,11 +433,11 @@ A Chrome Web Store release is planned for a future version.
 
 <p align="center">
   <img src="docs/screenshots/product-poco.png" width="45%">
+  <img src="docs/screenshots/product-overview.png" width="45%">
 </p>
 
 <p align="center">
-  <img src="docs/screenshots/product-overview.png" width="45%">
-  <img src="docs/screenshots/article-binary-heap.png" width="45%">
+  <img src="docs/screenshots/article-binary-heap.png" width="90%">
 </p>
 
 # 🗺️ Roadmap
