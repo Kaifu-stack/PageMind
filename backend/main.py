@@ -30,7 +30,8 @@ from youtube_transcript_api._errors import IpBlocked
 from langchain_core.documents import Document
 from langchain_core.prompts import PromptTemplate
 
-from langchain_huggingface import HuggingFaceEmbeddings
+# from langchain_huggingface import HuggingFaceEmbeddings
+from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_community.vectorstores import FAISS
 
 from langchain_google_genai import ChatGoogleGenerativeAI
@@ -66,14 +67,15 @@ DIRECT_CONTEXT_CHAR_LIMIT = 14_000
 video_sessions: dict = {}
 page_sessions: dict = {}
 
-# embeddings
-embeddings = HuggingFaceEmbeddings(
-    model_name=(
-        "sentence-transformers/"
-        "paraphrase-multilingual-MiniLM-L12-v2"
-    )
-)
+# # embeddings
+# embeddings = HuggingFaceEmbeddings(
+#     model_name=(
+#         "sentence-transformers/"
+#         "paraphrase-multilingual-MiniLM-L12-v2"
+#     )
+# )
 
+embeddings = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001")
 # gemini llm
 llm = ChatGoogleGenerativeAI(
     model="gemini-3.5-flash-lite",
