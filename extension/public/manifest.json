@@ -13,12 +13,15 @@
             "matches": [
                 "<all_urls>"
             ],
-            "js": ["contentScript.js"],
+            "js": [
+                "contentScript.js"
+            ],
             "run_at": "document_idle"
         }
     ],
     "host_permissions": [
         "http://127.0.0.1:8000/*",
+        "https://pagemind-backend.onrender.com/*",
         "https://www.youtube.com/*",
         "https://youtu.be/*"
     ],

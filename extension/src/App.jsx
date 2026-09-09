@@ -8,7 +8,8 @@ import ProductView from "./components/ProductView";
 import ChatWindow from "./components/ChatWindow";
 import ChatInput from "./components/ChatInput";
 
-const API_URL = "http://127.0.0.1:8000";
+// const API_URL = "http://127.0.0.1:8000";
+const API_URL = "https://pagemind-backend.onrender.com";
 
 const MIN_QA_HEIGHT = 25;
 const MAX_QA_HEIGHT = 65;
